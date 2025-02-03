@@ -1,0 +1,308 @@
+:root {
+    --font-inter: 'Inter', sans-serif;
+}
+
+
+
+body {
+    background-color: rgba(15, 23, 42);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    scroll-behavior: smooth;
+    margin-top: 70px;
+    
+}
+
+p, h1, h2 {
+   
+    font-family: var(--font-inter), ui-sans-serif, system-ui, 
+                 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                 "Helvetica Neue", Arial, "Noto Sans", sans-serif, 
+                 "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+p{
+    color: rgb(148, 163, 184); 
+    border-color: rgb(229, 231, 235);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 600;
+    line-height: 1.625;
+    
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    letter-spacing: 1px;
+    
+}
+
+h1, h2{
+    color: rgb(226, 232, 240);
+    font-size: 48px;
+    
+}
+
+
+
+h2{
+    font-size: 20px;
+}
+
+.special{
+    color: rgb(94, 234, 212);
+}
+
+#Name{
+    margin-bottom: 0;
+    margin-top: 2px;
+    padding-bottom: 4px;
+    width: fit-content;
+}
+
+#Name h1{
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    font-weight: bold;
+    
+    white-space: nowrap; 
+    overflow: hidden; 
+    border-right: 3px solid white; 
+    display: inline-block;
+    animation: typing 3s steps(40, end) forwards, 
+    blinkCursor 0.8s infinite steps(1, end), 
+    cursorFade 0.7s 3s forwards;
+}
+
+#Left{
+   margin-left: 50px;
+  
+    width: 400px;
+}
+
+#Intro{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#Intro h2{
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0px;
+}
+.glow-effect {
+    pointer-events: none;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 30; 
+    background: radial-gradient(600px at 1246px 263px, rgba(29, 78, 216, 0.15), transparent 80%);
+    transition: background 0.3s ease-in-out; 
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Cursor Blinking Effect */
+@keyframes blinkCursor {
+    50% { border-color: transparent; }
+}
+
+/* Remove Cursor at the End */
+@keyframes cursorFade {
+    to { border-color: transparent; }
+}
+
+
+/* Basic Nav Styling */
+#Nav {
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Spacing between options */
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+/* Default Nav Link Style */
+.nav-link {
+    text-decoration: none;
+    color: rgb(100, 116, 139); 
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    line-height: 16px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+/* Underline Effect */
+.nav-link::before {
+    content: "";
+    position: relative;
+    width: 35px; 
+    height: 1.2px; 
+    background-color: rgb(100, 116, 139);
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    flex-shrink: 0; 
+    --extra-gap: 0px; 
+}
+
+/* Active (Selected) Link */
+.nav-link.active {
+    color: rgb(226, 232, 240);
+}
+
+.nav-link.active::before {
+    width: 70px; 
+    background-color: rgb(226, 232, 240);
+    
+}
+
+/* Hover Effects */
+.nav-link:hover {
+    color: rgb(226, 232, 240);
+}
+
+.nav-link:hover::before {
+    width: 66px;
+    background-color: rgb(226, 232, 240);
+    
+}
+
+#contacts {
+    display: flex;
+    gap: 25px;
+    margin-top: 100px;
+}
+
+.icon {
+    font-size: 30px;
+    color: rgb(100, 116, 139);
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: rgb(226, 232, 240);
+}
+
+#Right{
+   
+    margin-right: 50px;
+    width: 700px;
+}
+
+#Projects{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 100px;
+
+}
+.project{
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    margin-left: -30px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.image{
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    
+}
+
+.image img{
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    border: 3px solid rgba(100, 116, 139, 0.705);
+}
+#Content h2{
+    padding: 0;
+    margin: 0;
+}
+
+#Content p{
+    padding-top: 10px;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.3;
+    font-size: 15px;
+}
+
+.project:hover {
+    background-color: rgba(94, 234, 213, 0.089);
+    border-radius: 8px;
+    transition: transform 1s ease-in-out;
+}
+
+.project:hover h2 {
+    color: rgb(94, 234, 213);
+    transition: transform 1s ease-in-out;
+}
+
+.test {
+    display: inline-block;
+    transform: rotate(-45deg);
+    color: rgb(226, 232, 240);
+    transition: transform 0.3s ease-in-out; /* Add transition in default state */
+}
+
+/* Move arrow on hover */
+.project:hover .test {
+    color: rgb(94, 234, 213);
+    transform: rotate(-45deg) translate(7px, -3px); /* Moves right & up */
+}
+
+
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+#Left{
+    height: fit-content;
+}
+
+#Right {
+    
+    height: 100vh;
+    overflow-y: auto; /* Enable scrolling */
+    margin-bottom: 40px;
+    scrollbar-width: none;
+    max-height: calc(100vh - 550px);
+    padding-bottom: 550px;
+    position: relative;
+}
